@@ -1,5 +1,7 @@
 {
   "scripts": {
+    "build": "",
+    "watch": "",
     "eslint": "eslint src/**/*.ts",
     "eslint:fix": "eslint --fix src/**/*.ts",
     "prettier": "prettier --write . '!dist/**/*'",
