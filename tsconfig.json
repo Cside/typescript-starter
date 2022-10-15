@@ -8,5 +8,8 @@
     "jsx": "react",
     "rootDir": "src",
     "outDir": "dist"
-  }
+  },
+  "exclude": [
+    "src/**/*.spec.ts"
+  ]
 }
