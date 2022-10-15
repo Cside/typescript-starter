@@ -3,8 +3,8 @@
   "scripts": {
     "build": "",
     "watch": "",
-    "eslint": "eslint src/**/*.ts",
-    "eslint:fix": "eslint --fix src/**/*.ts",
+    "eslint": "eslint 'src/**/*.{ts,tsx}'",
+    "eslint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
     "prettier": "prettier --write . '!dist/**/*'",
     "lint": "yarn run eslint:fix && yarn run prettier"
   },
