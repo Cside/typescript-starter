@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build": "",
-    "watch": "",
+    "build": "webpack",
+    "watch": "webpack -w",
     "eslint": "eslint 'src/**/*.{ts,tsx}'",
     "eslint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
     "prettier": "prettier --write . '!dist/**/*'",
