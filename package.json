@@ -40,12 +40,8 @@
   "jest": {
     "transform": {
       "\\.[jt]sx?$": [
-        "ts-jest",
-        {
-          "useESM": true
-        }
+        "ts-jest"
       ]
-    },
-    "preset": "ts-jest/presets/default-esm"
+    }
   }
 }
