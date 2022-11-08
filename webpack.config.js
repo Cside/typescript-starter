@@ -1,6 +1,11 @@
-module.exports = {
+const config = {
   mode: process.env.NODE_ENV || 'development',
-  entry: './src/main.tsx',
+  entry: {
+    background: './src/background.ts',
+    popup: './src/popup.ts',
+    options: './src/options.ts',
+    'content-script': './src/content-script.ts',
+  },
   output: {
     path: `${__dirname}/public/js`,
   },
@@ -35,7 +40,21 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    splitChunks: {
+      name: 'vendor',
+      chunks(chunk) {
+        return chunk.name !== 'background';
+      },
+    },
+  },
   watchOptions: {
     ignored: /node_modules/,
   },
 };
+
+if (config.mode === 'development') {
+  config.devtool = 'inline-source-map';
+}
+
+module.exports = config;
