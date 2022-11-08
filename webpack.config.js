@@ -35,6 +35,11 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   watchOptions: {
     ignored: /node_modules/,
   },
