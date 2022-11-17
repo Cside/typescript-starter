@@ -12,26 +12,24 @@ module.exports = {
       {
         test: /\.ts/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              [
-                '@babel/preset-env',
-                {
-                  targets: ['defaults'],
-                  useBuiltIns: 'usage',
-                  corejs: 3,
-                },
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                [
+                  '@babel/preset-env',
+                  {
+                    targets: ['defaults'],
+                    useBuiltIns: 'usage',
+                    corejs: 3,
+                  },
+                ],
               ],
-            ],
+            },
           },
-        },
-      },
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
+          'ts-loader',
+        ],
       },
     ],
   },
