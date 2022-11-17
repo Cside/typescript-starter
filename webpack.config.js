@@ -24,7 +24,7 @@ const config = {
               [
                 '@babel/preset-env',
                 {
-                  targets: ['defaults'],
+                  targets: ['last 1 years and Chrome >= 1'],
                   useBuiltIns: 'usage',
                   corejs: 3,
                 },
