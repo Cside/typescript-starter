@@ -7,7 +7,7 @@
     "page": "./options.html"
   },
   "action": {
-    "default_icon": "./img/icon.png",
+    "default_icon": "./imgages/icon.png",
     "default_popup": "./popup.html"
   },
   "content_scripts": [
