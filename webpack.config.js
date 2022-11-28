@@ -1,4 +1,7 @@
-module.exports = {
+const merge = require('lodash.merge');
+const TerserPlugin = require('terser-webpack-plugin');
+
+let config = {
   mode: process.env.NODE_ENV || 'development',
   entry: './src/main.tsx',
   output: {
@@ -42,3 +45,24 @@ module.exports = {
     ignored: /node_modules/,
   },
 };
+
+if (config.mode === 'development') {
+  config.devtool = 'inline-source-map';
+  config = merge(config, {
+    devtool: 'inline-source-map',
+  });
+} else {
+  config = merge(config, {
+    plugins: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            pure_funcs: ['console.log', 'console.info'],
+          },
+        },
+      }),
+    ],
+  });
+}
+
+module.exports = config;
