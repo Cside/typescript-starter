@@ -2,9 +2,9 @@
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "watch": "NODE_ENV=development webpack -w",
-    "eslint": "eslint 'src/**/*.{ts,tsx}'",
-    "eslint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
-    "prettier": "prettier --write . '!dist/**/*'",
+    "eslint": "eslint './src/**/*.{ts,tsx}'",
+    "eslint:fix": "eslint --fix './src/**/*.{ts,tsx}'",
+    "prettier": "prettier --write . '!./public/**/*'",
     "lint": "yarn run eslint:fix && yarn run prettier"
   },
   "devDependencies": {
