@@ -3,7 +3,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 let config = {
   mode: process.env.NODE_ENV || 'development',
-  entry: './src/main.tsx',
+  entry: './src/ts/main.tsx',
   output: {
     path: `${__dirname}/public/js`,
   },
