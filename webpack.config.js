@@ -1,6 +1,7 @@
 const merge = require('lodash.merge');
 const TerserPlugin = require('terser-webpack-plugin');
 
+/** @type import('webpack').Configuration */
 let config = {
   mode: process.env.NODE_ENV || 'development',
   entry: './src/ts/main.tsx',
